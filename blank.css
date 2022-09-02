@@ -1,0 +1,112 @@
+/* for the lazy */
+@import url(https://fonts.googleapis.com/css?family=Sanchez);
+
+
+body {
+    width: 120px;
+    height: 100px;
+    background-color: #B7D37A;
+}
+
+*,
+*::before,
+*::after {
+  transition: 400ms all ease-in-out 5ms;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+}
+
+div {
+  height: 20px;
+  width: 50px;
+  background: rgba(43, 43, 43, 1);
+  position: relative;
+  top: calc(15vh);
+  left: calc(25vw);
+  box-shadow: 0 0 2px rgba(43,43,43,1);
+}
+p{
+  font-weight:bold;
+  position: relative;
+  top: calc(12vh);
+  left: calc(25vw - 20px);
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+/*Button is :CHECKED*/
+
+input[type="checkbox"]:checked ~ div {
+  background: rgba(73,168,68,1);
+  box-shadow: 0 0 2px rgba(73,168,68,1);
+}
+
+input[type="checkbox"]:checked ~ div label {
+  left: 30px;
+  transform: rotate(360deg);
+}
+
+
+/*shared*/
+
+div,
+label {
+  border-radius: 50px;
+}
+
+
+/*'un':checked state*/
+
+
+
+label {
+  height: 15px;
+  width: 15px;
+  background: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 2px;
+  left: 4px;
+  cursor: pointer;
+}
+
+label::before {
+  content: '';
+  height: 10px;
+  width: 2px;
+  position: absolute;
+  top: calc(50% - 5px);
+  left: calc(50% - 1px);
+  transform: rotate(45deg);
+}
+
+label::after {
+  content: '';
+  height: 2px;
+  width: 10px;
+  position: absolute;
+  top: calc(50%);
+  left: calc(50% - 5.2px);
+  transform: rotate(45deg);
+}
+
+label::before,
+label::after{
+  background: rgba(43,43,43,1);
+  border-radius: 5px;
+}
+
+/* pesduo class on toggle */
+
+input[type="checkbox"]:checked ~ div label::before{
+  height: 15px;
+  top: calc(50% - 8px);
+  left: calc(70%);
+  background: rgba(73,168,68,1);
+}
+input[type="checkbox"]:checked ~ div label::after{
+  width: 5px;
+  top: calc(50%-1px);
+  left: calc(14%);
+  background: rgba(73,168,68,1);
+}

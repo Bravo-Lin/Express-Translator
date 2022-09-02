@@ -1,0 +1,10 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "target": "ES2019",
+    "strict": true,
+    "alwaysStrict": true,
+    "outDir": "js"
+  },
+  "include": ["./tsFiles/"]
+}

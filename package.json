@@ -1,0 +1,17 @@
+{
+  "name": "lightning--translator",
+  "version": "1.0.0",
+  "description": "",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "tran": "tsc "
+  },
+  "author": "bravo lin",
+  "license": "ISC",
+  "dependencies": {
+    "@types/chrome": "^0.0.195",
+    "typescript": "^4.8.2"
+  }
+}

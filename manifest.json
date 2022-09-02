@@ -1,0 +1,30 @@
+{
+    "name": "快捷翻译",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "description": "An extension for translation.",
+    "icons": {
+        "16": "img/favicon-16x16.png",
+        "32": "img/favicon-32x32.png",
+        "48": "img/icon.png",
+        "128": "img/icon-192x192.png"
+    },
+    "background":{
+        "service_worker":"js/background.js"
+
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": ["<all_urls>", "activeTab", "tabs", "storage"],
+    "content_scripts": [
+        {
+            "matches": [
+              "<all_urls>"
+            ],
+            "js": [
+                "js/content.js"
+            ]
+        }
+    ]
+}
